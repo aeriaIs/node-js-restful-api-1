@@ -8,8 +8,13 @@ router.get('/', (req, res, next) => {
 });
 
 router.post('/', (req, res, next) => {
+  const cars = {
+    name: req.body.name,
+    brand: req.body.brand,
+  };
   res.status(200).json({
-    message: 'Car\'s post method'
+    message: 'Car\'s post method',
+    body: cars
   });
 });
 
